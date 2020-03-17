@@ -1,0 +1,10 @@
+List of Announcements
+<p>
+	<button type="button" (click)="GetAnnouncement()">Get Announcements</button>
+	<button type="button" (click)="RemoveAnnouncement()">Remove last Announcement</button>
+</p>
+
+<div *ngFor="let item of Announcements; trackBy:TrackBy">
+	<span>{{item.Id}}: {{item.Title}}</span>
+	<span [innerHTML]="item.Body"></span>
+</div>
